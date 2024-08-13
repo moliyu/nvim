@@ -1,3 +1,4 @@
 {
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "rust-analyzer.inlayHints.typeHints.enable": true
 }

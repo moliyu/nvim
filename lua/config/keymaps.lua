@@ -115,10 +115,11 @@ local function coc()
   keyset("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })
 
   -- GoTo code navigation
-  keyset("n", "gd", "<Plug>(coc-definition)", { silent = true })
+  -- keyset("n", "gd", "<Plug>(coc-definition)", { silent = true })
+  keyset("n", "gd", "<cmd>Telescope coc definitions<cr>", { silent = true })
   keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
   keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })
-  keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
+  keyset("n", "gr", "<cmd>Telescope coc references<cr>", { silent = true })
 
   -- Use K to show documentation in preview window
   function _G.show_docs()
@@ -171,9 +172,9 @@ local function coc()
   keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
 
   -- Remap keys for apply code actions at the cursor position.
-  keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
+  keyset("n", "<leader>ca", "<Plug>(coc-codeaction-cursor)", opts)
   -- Remap keys for apply source code actions for current file.
-  keyset("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts)
+  keyset("n", "<leader>cA", "<Plug>(coc-codeaction-source)", opts)
   -- Apply the most preferred quickfix action on the current line.
   keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
 
@@ -230,15 +231,15 @@ local function coc()
   ---@diagnostic disable-next-line: redefined-local
   local opts = { silent = true, nowait = true }
   -- Show all diagnostics
-  keyset("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
+  -- keyset("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
   -- Manage extensions
-  keyset("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
+  -- keyset("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
   -- Show commands
-  keyset("n", "<space>c", ":<C-u>CocList commands<cr>", opts)
+  -- keyset("n", "<space>c", ":<C-u>CocList commands<cr>", opts)
   -- Find symbol of current document
-  keyset("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
+  -- keyset("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
   -- Search workspace symbols
-  keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
+  -- keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
   -- Do default action for next item
   keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
   -- Do default action for previous item
@@ -248,4 +249,6 @@ local function coc()
 end
 
 custom()
-coc()
+if not vim.g.vscode then
+  coc()
+end
