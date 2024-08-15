@@ -1,4 +1,5 @@
 {
   "eslint.autoFixOnSave": true,
-  "rust-analyzer.inlayHints.typeHints.enable": true
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "snippets.ultisnips.pythonPrompt": false
 }

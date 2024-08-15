@@ -4,6 +4,19 @@ return {
   {
     "neoclide/coc.nvim",
     branch = "release",
+    config = function()
+      vim.g.coc_global_extensions = {
+        "coc-json",
+        "coc-html",
+        "coc-tsserver",
+        "coc-eslint",
+        "@moliyu/coc-unocss",
+        "coc-lua",
+        "coc-rust-analyzer",
+        "@yaegassy/coc-volar",
+        "coc-snippets",
+      }
+    end,
   },
   {
     "fannheyward/telescope-coc.nvim",
@@ -23,6 +36,16 @@ return {
       })
       require("telescope").load_extension("coc")
     end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vue",
+        "scss",
+        "nix",
+      },
+    },
   },
   -- {
   --   "neovim/nvim-lspconfig",
