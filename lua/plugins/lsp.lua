@@ -7,7 +7,7 @@ return {
     config = function()
       vim.g.coc_global_extensions = {
         "coc-json",
-        "coc-html",
+        -- "coc-html",
         "coc-tsserver",
         "coc-eslint",
         "@moliyu/coc-unocss",
@@ -16,6 +16,7 @@ return {
         "@yaegassy/coc-volar",
         "coc-snippets",
       }
+      vim.api.nvim_set_hl(0, "CocInlayHint", { fg = "Grey" })
     end,
   },
   {
