@@ -2,5 +2,8 @@
   "eslint.autoFixOnSave": true,
   "rust-analyzer.inlayHints.typeHints.enable": true,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["rust"]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "rust"
+  ],
+  "snippets.ultisnips.pythonPrompt": false
 }

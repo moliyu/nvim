@@ -1,3 +1,3 @@
 return {
-  { "APZelos/blamer.nvim" },
+  { "moliyu/blamer.nvim" },
 }
