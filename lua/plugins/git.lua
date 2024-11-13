@@ -1,3 +1,0 @@
-return {
-  { "moliyu/blamer.nvim" },
-}
